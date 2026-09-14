@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI
 
 app = FastAPI(title="Nginx Under the Hood")
@@ -16,6 +17,7 @@ def health():
     return {
         "status": "ok",
         "service": "server",
+        "instance": os.getenv("INSTANCE_ID", "unknown"),
     }
 
 
