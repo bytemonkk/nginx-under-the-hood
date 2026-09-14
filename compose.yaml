@@ -1,8 +1,6 @@
 services:
   server:
     build: ./server
-    ports:
-      - "3001:3001"
   
   nginx:
     image: nginx:alpine
